@@ -9,6 +9,7 @@ Plug 'sainnhe/edge'
 Plug 'sheerun/vim-polyglot'
 Plug 'zsugabubus/vim-jumpmotion'
 Plug 'ryanoasis/vim-devicons'
+Plug 'tpope/vim-surround'
 
 " FZF settings
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -37,6 +38,8 @@ nnoremap <silent> [fzf-p]l     :<C-u>FzfPreviewLocationListRpc<CR>
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " COC settings
+
+let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-tsserver', ]
 
 set hidden
 set nobackup
@@ -164,6 +167,8 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+nmap <C-S-p> :CocCommand fzf-preview.ProjectFiles<CR>
 
 " End COC settings
 
