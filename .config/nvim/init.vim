@@ -178,6 +178,8 @@ endif
 
 set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor
 
+" Use system clipboard
+set clipboard=unnamedplus
 nmap <C-v> "+p
 nmap <C-s> :w<CR>
 nmap <leader>gh :diffget //3<CR>
